@@ -71,32 +71,37 @@
 	</div> 
 </header>
 <section class="equiposDivision">
-<div class="divDivision">
-	<div class="divParrafo">
+<div class="divDivision divisionMobile">
+	<div class="mobileHome " >
+		<h4>EQUIPOS</h4>
+	</div>
+	<a class="divParrafo fondo1" href='laboratorio.php'>
 		<h4>
 			DIVISIÓN LABORATORIO
 		</h4>
 		<div class='divIngresar'>
 			<img src='./img/iconB.png'/>
-			<a href='laboratorio.php'>
+			<h6 >
 				Ingresar
-			</a>
+			</h6>
 		</div>
-	</div>
-	<div class="divParrafo">
+	</a>
+	<a class="divParrafo fondo2" href='iluminacion.php'>
 		<h4 >
 			DIVISIÓN ILUMINACIÓN
 		</h4>
 		<div class='divIngresar'>
 			<img src='./img/iconB.png'/>
-			<a href='iluminacion.php'>
+			<h6 >
 				Ingresar
-			</a>
+			</h6>
 		</div>		
-	</div>
+	</a>
 </div>
 </section>	
-<img class="f-width" src="img/bg-bottom-section.jpg" alt="Obertec" title="Obertec">
+<!-- <img class="f-width" src="img/bg-bottom-section.jpg" alt="Obertec" title="Obertec"> -->
 <?php
 	require_once("footer.php");
 ?>
+
+</body>

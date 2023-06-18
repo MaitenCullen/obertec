@@ -47,7 +47,8 @@ a {
 }
 a:active,
 a:hover {
-  outline: 0;
+  color: #fff;
+  text-decoration: none;
 }
 abbr[title] {
   border-bottom: 1px dotted;
@@ -200,9 +201,10 @@ th {
   }
   a,
   a:visited {
-    text-decoration: underline;
+    color: #fff;
+    text-decoration: none;
   }
-  a[href]:after {
+  /* a[href]:after {
     content: " (" attr(href) ")";
   }
   abbr[title]:after {
@@ -211,7 +213,7 @@ th {
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
-  }
+  } */
   pre,
   blockquote {
     border: 1px solid #999;
@@ -1097,13 +1099,13 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #fff;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
-  text-decoration: underline;
+ color: #fff;
+  text-decoration: none;
 }
 a:focus {
   outline: thin dotted;
@@ -3424,7 +3426,7 @@ fieldset[disabled] .btn-link {
 .btn-link:hover,
 .btn-link:focus {
   color: #23527c;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 .btn-link[disabled]:hover,

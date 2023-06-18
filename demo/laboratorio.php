@@ -132,7 +132,7 @@
 ?>
 <script src= "js/imagenes.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/awesomplete@1.1.2/awesomplete.min.js"></script> -->
-
-<script src= "js/search.js"></script>
+<!-- 
+<script src= "js/search.js"></script> -->
 
 </body>

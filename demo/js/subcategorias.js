@@ -4,7 +4,8 @@ const subcategorias = [
         categoriaID:'1',
         categoria:'AGITADORES',
         nombre:'MAGNETICOS',
-        imagen:'../demo/img/laboratorioIMG/78-1.jpg',
+        imagen:'../demo/img/laboratorioIMG/78-1a.jpg',
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'2',
@@ -12,6 +13,7 @@ const subcategorias = [
         nombre:'VORTEX',
         categoria:'AGITADORES',
         imagen:'../demo/img/laboratorioIMG/VM300S.jpg',
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'3',
@@ -19,13 +21,15 @@ const subcategorias = [
         nombre:'BAÑOS CON AROS CONCENTRICOS',
         categoria:'BAÑOS TERMOSTÁTICOS',
         imagen:'../demo/img/laboratorioIMG/WB100-2F.jpg',
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'4',
         categoriaID:'2',
         nombre:'BAÑO DE BLOQUE SECO',
         categoria:'BAÑOS TERMOSTÁTICOS',
-        imagen:'DRBA-100-NOTIENEAUNIMG',
+        imagen:'../demo/img/proximamente1.png',
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'5',
@@ -33,20 +37,23 @@ const subcategorias = [
         nombre:'BAÑO CON CIRCULACION',
         categoria:'BAÑOS TERMOSTÁTICOS',
         imagen:'../demo/img/laboratorioIMG/TC-800B.jpg',
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'6',
         categoriaID:'3',
         nombre:'CUBAS DE ELECTROFORESIS',
         categoria:'BIOLOGIA MOLECULAR Y GENETICA',
-        imagen:'NN',
+        imagen:'../demo/img/proximamente1.png',
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'7',
         categoriaID:'3',
         nombre:'FUENTES DE PODER',
         categoria:'BIOLOGIA MOLECULAR Y GENETICA',
-        imagen:'NN',    
+        imagen:'../demo/img/proximamente1.png', 
+        icon:'../demo/img/iconAzul1.png',   
     },
     {
         id:'8',
@@ -54,6 +61,7 @@ const subcategorias = [
         nombre:'MACRO CENTRIFUGAS',
         categoria:'CENTRIFUGAS',
         imagen:'../demo/img/laboratorioIMG/800D.jpg',
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'9',
@@ -61,6 +69,7 @@ const subcategorias = [
         nombre:'DE ALTA VELOCIDAD ',
         categoria:'CENTRIFUGAS',
         imagen:'../demo/img/laboratorioIMG/LC-12S.jpg', 
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'10',
@@ -68,6 +77,7 @@ const subcategorias = [
         nombre:'MINI CENTRIFUGAS',
         categoria:'CENTRIFUGAS',
         imagen:'../demo/img/laboratorioIMG/MC-12PRO.jpg', 
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'11',
@@ -75,6 +85,7 @@ const subcategorias = [
         nombre:'ESTUFAS DE CULTIVO',
         categoria:'ESTUFAS',
         imagen:'../demo/img/laboratorioIMG/estufa.jpg', 
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'12',
@@ -82,6 +93,7 @@ const subcategorias = [
         nombre:'CIRCULAR',
         categoria:'HOMOGENEIZADOR',
         imagen:'../demo/img/laboratorioIMG/RMO-80.jpg', 
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'13',
@@ -89,13 +101,15 @@ const subcategorias = [
         nombre:'MANTO CALEFACTOR',
         categoria:'MANTOS Y PLANCHAS',
         imagen:'../demo/img/laboratorioIMG/HM.jpg',
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'14',
         categoriaID:'7',
-        nombre:'PLANCHA CALEFACTIRA',
+        nombre:'PLANCHA CALEFACTORA',
         categoria:'MANTOS Y PLANCHAS',
         imagen:'../demo/img/laboratorioIMG/MS5.jpg',
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'15',
@@ -103,6 +117,7 @@ const subcategorias = [
         nombre:'MICROPIPETAS AUTOMATICAS',
         categoria:'MANEJO DE SUSTANCIAS LIQUIDAS',
         imagen:'../demo/img/laboratorioIMG/micropipeta.jpg',
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'16',
@@ -110,6 +125,7 @@ const subcategorias = [
         nombre:'MICROSCOPIOS BINOCULARES',
         categoria:'MICROSCOPIA',
         imagen:'../demo/img/laboratorioIMG/XSZ107BN.jpg', 
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'17',
@@ -117,6 +133,7 @@ const subcategorias = [
         nombre:'LUPAS BINOCULARES',
         categoria:'MICROSCOPIA',
         imagen:'../demo/img/laboratorioIMG/lupaSL10.jpg',
+        icon:'../demo/img/iconAzul1.png',
     },
     {
         id:'18',
@@ -124,30 +141,35 @@ const subcategorias = [
         nombre:'CABEZALES TERMOCONTROLADORES',
         categoria:'TERMOCONTROLADORES',
         imagen:'../demo/img/laboratorioIMG/TC-800Ba.jpg',
+        icon:'../demo/img/iconAzul1.png',
     },
 ]
 
 
 const urlParams = new URLSearchParams(window.location.search);
 	const myParam = urlParams.get('subcategoria');
-	console.log(myParam)
+	
 
     let bannerSeleccion = document.getElementById('seleccionado');
 
     let subcategoriasFiltro = subcategorias.filter(sub => sub.categoriaID == myParam)
-        console.log(subcategoriasFiltro[0], "subcategoria")
 
- 
     bannerSeleccion.innerText = subcategoriasFiltro[0].categoria
     
-   
+    
+    
       
     let subSection = document.getElementById('subcategorias');
-
+  if(subSection){
     subSection.innerHTML = subcategoriasFiltro.map( subID => (
         `<div class="imgSubcategoria">` +
         `<img src=${subID.imagen} />` + 
            `<p>${subID.nombre}</p>` +
-           `<a href=productosLaboratorio.php?productos=${subID.id}> Otro Link </a>` +
+           `<div  class="iconDivisionLab">` +
+           `<img src="${subID.icon}" />`+
+           `<a href=productosLaboratorio.php?productos=${subID.id}&categoria=${encodeURIComponent(subID.categoria)}> Ver </a>` +
+           `</div>`+
         '</div>'
     )).join('');
+  }
+    

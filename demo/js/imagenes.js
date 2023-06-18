@@ -92,7 +92,7 @@ app.innerHTML = categorias.map(imagen => (
             `<p>${imagen.categoria}</p>`+
             '<div class="divTextCategoria">' +
                 `<img src="${imagen.icon}"/>`+
-                `<a href=subcategorias.php?subcategoria=${imagen.id}> Otro Link </a>`+
+                `<a href=subcategorias.php?subcategoria=${imagen.id}> Ver </a>`+
             '</div>'+ 
        '</div>'+
     '</div>'

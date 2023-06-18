@@ -139,10 +139,10 @@
         </div>
         <div class="col-md-4" style="border-bottom: 2.5px solid #000;">
           <div class="banner text-left">
-			  <a href="negatoscopios.php" title="negatoscopios"><img src="img/div-ilu.jpg" title="Iluminación" alt="Negatoscopio" class="f-width"></a>
+			  <a href="equipos.php" title="negatoscopios"><img src="img/div-ilu.jpg" title="Iluminación" alt="Negatoscopio" class="f-width"></a>
 				<div>
-					<h2 class="highlight-02"><span class="glyphicon glyphicon-triangle-right"></span><a href="negatoscopios.php" title="Ir a División Iluminación">DIVISIÓN ILUMINACIÓN</a></h2>	
-					<a href="negatoscopios.php" class="blue-link" title="Ingresar">Ingresar</a>
+					<h2 class="highlight-02"><span class="glyphicon glyphicon-triangle-right"></span><a href="iluminacion.php" title="Ir a División Iluminación">DIVISIÓN ILUMINACIÓN</a></h2>	
+					<a href="equipos.php" class="blue-link" title="Ingresar">Ingresar</a>
 				</div>
 			</div>
         </div>

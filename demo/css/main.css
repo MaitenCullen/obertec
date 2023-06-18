@@ -68,6 +68,7 @@ img {
 .wrapper {
 	max-width: 1800px;
 	margin: auto;
+	background-color: #fff;
 }
 
 header .container-fluid,
@@ -75,16 +76,32 @@ footer .container-fluid {
     padding-right: 0px;
     padding-left: 0px;
 }
+.title-section{
+	display: flex;
+    flex-direction: column;
+}
 
-
-/* .title-section {
+ .title-section h1 {
+	font-family: 'Helvetica Neue LT-Std';
+	font-size: 3rem;
+	color: #ffffff;
+}
+.title-section h2 {
 	font-family: 'Helvetica Neue LT-Std';
 	font-size: 4rem;
-	color: #000;
-	padding-bottom: 1.5rem;
-	border-bottom: 1px solid #000;
-} */
-
+	color: #ffffff;
+}
+.title-section h3 {
+	font-family: 'Helvetica Neue LT-Std';
+	font-size: 2.5rem;
+	color: #ffffff;
+	margin-left: 1rem;
+}
+.divTiulos{
+	display: flex;
+    justify-content: flex-start;
+	align-items: center;
+}
 footer {
 	background: #212530;
 	font-family: 'HelveticaNeueLTStd-Lt';
@@ -304,6 +321,7 @@ button {
 .bolder {
 	font-family: 'Helvetica Neue LT Std';
 	font-size: 2rem;
+	padding: 3px;
 }
 
 .full-width {
@@ -336,20 +354,34 @@ button {
 	padding-left: 0;
 }
 
-.equiposDivision {
+/* .equiposDivision {
 	background-image: url('../img/equiposDivision.jpg');
 	background-size: cover;
 	min-height: 100vh;
-}
+    background-position: center;
+} */
 .divDivision {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	background-color: #000;
+}
+.divisionMobile{
+	display: none;
+}
+.mobileHome{
+	background-image:url('../img/galeria1.png');
+	background-size: cover;
+    background-position: center;
+	height: calc(100vh/3);
+	display: none;
+	border: solid 2px #000;
+	font-family: 'HelveticaNeueLTStd-Md';
 }
 .divParrafo {
 	color: white;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueLTStd-Md';
 	display: flex;
     justify-content: center;
 	flex-direction: column;
@@ -362,9 +394,45 @@ button {
 .divParrafo h5 {
 	font-size: 20px;
 }
+.fondo1{
+	background-image:url('../img/galeriaLab.png');
+	background-size: cover;
+	height: 100vh;
+    background-position: center;
+	position: relative;
+	text-decoration: none;
+}
+.fondo1:active{
+	zoom: 135%;
+	text-decoration: none;
+	color: #fff;
+}
+.fondo2{
+	background-image:url('../img/galeriaIlu.png');
+	background-size: cover;
+	height: 100vh;
+    background-position: center;
+	position: relative;
+	text-decoration: none;
+	color: #fff;
+}
+.fondo2:active{
+	zoom: 135%;
+	text-decoration: none;
+	color: #fff;
+}
+
+
 .divIngresar {
 	display: flex;
     align-items: center;
+	font-family: 'Helvetica Neue LT-Std';
+	font-size: 25px;
+}
+.divIngresar h6{
+	color: white;
+	text-decoration: none;
+	font-size: 25px;
 }
 .divIngresar img {
 	width: 70%;
@@ -423,7 +491,8 @@ button {
 }
 
 h2.name {
-	color: #a9c4dd;
+	
+	color: #1a4b6b;
 	font-family: 'Helvetica Neue LT Std';
 	font-size: 2.25rem;
 	line-height: 2.25rem;
@@ -433,6 +502,7 @@ h3.brand {
 	font-family: 'Helvetica Neue LT-Std';
 	font-size: 1.75rem;
 	line-height: 1.75rem;
+	color: #1a4b6b;
 }
 
 hr.name-line {
@@ -450,15 +520,17 @@ hr.bolder-line {
 }
 
 .vip {
-	font-size: 1.75rem;
-	color: #5e8ec0;
 	font-family: 'Helvetica Neue LT-Std';
+	font-size: 1.75rem;
+	color: #1a4b6b;
+	line-height:2rem;
 }
 
 .title-list,
 .description {
-	font-family: 'Helvetica Neue LT-Std';
+	font-family: 'HelveticaNeueLTStd-Md';
 	font-size: 1.7rem;
+	color: #1a4b6b;
 }
 
 .description {
@@ -484,6 +556,184 @@ hr.bolder-line {
 	display: flex;
     justify-content: space-between;
 }
+.divBannerIlu{
+	background-image: url('../img/galeria/banner1.png');
+	width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.divBannerIlu div{
+	height: 100%;
+}
+.tituloBanner{
+	display: flex;
+    align-items: center;
+}
+.tituloBanner h1{
+	font-size: 34px;
+	font-family: 'HelveticaNeueLTStd-Lt';
+	text-align: left;
+	color:#186990;
+	margin: 3px;
+}
+.tituloBanner h2{
+	font-size: 24px;
+	font-family: 'HelveticaNeueLTStd-Lt';
+	text-align: left;
+	color:#186990;
+	margin: 3px;
+}
+.tituloNegatoscopio{
+	color: #1a4b6b;
+	font-size: 45px;
+	font-family: 'HelveticaNeueLTStd-Lt';
+	text-align: left;
+	/* width: 50%; */
+    display: flex;
+	flex-wrap: wrap;
+    align-content: center;
+	align-items: center;
+	padding: 2%;
+}
+.tituloNegatoscopio img{
+	width: 15px;
+	height: 20px;
+	margin-right: 10px;
+}
+.containerIluminacion{
+	background-color: #000;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerIluminacion a{
+	color: white;
+	text-decoration: none;
+}
+.divLinkIluminacion{
+	background-image: url('../img/iluHome.png');
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	height: 70%;
+	width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+}
+.containerTextosIlu{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.divTextIlu{
+	display: flex;
+	color: white;
+	align-items: center;
+}
+.divTextIlu img{
+	height: 50%;
+}
+.divTextIlu h4{
+	font-size: 2.5rem;
+	font-family: 'HelveticaNeueLTStd-Md';
+}
+.divLinkIluminacion a{
+	font-family: 'HelveticaNeueLTStd-Md';
+	font-size: 2rem;
+	margin-bottom: 5px;
+}
+.divProductosIlu{
+	display: flex;
+    justify-content: center;
+}
+.divProductoLab{
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+	
+}
+.divProximamente{
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'HelveticaNeueLTStd-Md';
+	font-size: 3rem;
+	color: #1a4b6b;
+
+}
+.containerProductosIlu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productosIluDiv{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.categoriaProductosDiv{
+	width: 200px;
+	margin: 2%;
+	display: flex;
+    text-align: center;
+    flex-direction: column;
+	align-items: center;
+}
+.categoriaProductosDiv h5 {
+	color: #186990;
+	font-family: 'HelveticaNeueLTStd-Md';
+	font-size: 15px;
+}
+.categoriaProductosDiv a {
+	color: #186990;
+	font-family: 'HelveticaNeueLTStd-Md';
+	font-size: 15px;
+}
+.divImgIlu{
+	border: solid 1px #186990;
+	width: 100%;
+	display: flex;
+    justify-content: center;
+}
+.divImgIlu img{
+	height: 130px;
+}
+.irArriba{
+	width: 90%;
+	margin-bottom: 1%;
+    display: flex;
+    justify-content: flex-end;
+}
+.irArribaText{
+	color: #186990;
+	font-family: 'Helvetica Neue LT-Std';
+	font-size: 1.75rem;
+	line-height: 1.75rem;
+	text-align: left;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+}
+.irArribaText img{
+	width: 15px;
+	height: 25px;
+	margin-right: 10px;
+}
+.containerBannerText{
+	width: 100%;
+    display: flex;
+    align-items: center;
+	justify-content: flex-start;
+}
 .divBanner{
 	width: 100%;
 	display: flex;
@@ -497,18 +747,21 @@ hr.bolder-line {
 	font-family: 'HelveticaNeueLTStd-Lt';
 	text-align: left;
 	color: #fff;
+	margin: 0;
 }
 .divBanner h3 {
 	font-size: 54px;
 	font-family: 'HelveticaNeueLTStd-Lt';
 	text-align: left;
 	color: #fff;
+	margin: 0;
 }
 .divBanner h4 {
 	font-size: 24px;
 	font-family: 'HelveticaNeueLTStd-Lt';
 	text-align: left;
 	color: #fff;
+	margin-left: 2%;
 }
 .divTextosBanner{
 	display: flex;
@@ -541,39 +794,135 @@ hr.bolder-line {
     justify-content: flex-end;
 	
 }
+
 .imgGaleria a {
 	text-decoration: none;
 	color: #fff;
 	font-family: 'HelveticaNeueLTStd-Lt';
 	font-size: 1.5rem;
 	cursor: pointer;
+
 }
 
 .textCategoria{
 	display: flex;
-    margin-bottom: 10%;
     width: 60%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.textCategoria p{
+	font-family: 'HelveticaNeueLTStd-Md';
+	color:#fff;
+	font-size: 1.7rem;
+	line-height: 1.8rem;
+}
 
 .divTextCategoria{
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	margin-bottom: 7%;
+}
+.divTextCategoria img{
+	width: 25%;
 }
 .subcategoriasDIV{
+	height:100vh;
+	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
+	align-items: center;
 }
 
 .imgSubcategoria{
-	width: 40%;	
+	height: 70%;
+	width: 45%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+.imgSubcategoria p{
+	font-family: 'Helvetica Neue LT Std';
+	color: #186990;
+}
+.imgSubcategoria a{
+	font-family: 'HelveticaNeueLTStd-Bd';
+	color: #186990;
+}
+.imgSubcategoria img {
+	max-width: 230px;
+    width: inherit;
+    height: inherit;
+}
+.division{
+	display: flex;
+	width: 20%;
+    padding-top: 5%;
+    flex-direction: column;
+	color: #1a4b6b;
+}
+.division h5{
+	font-family: 'HelveticaNeueLTStd-Md';
+	font-size: 1.5rem;
+	line-height: 1.75rem;
+}
+.division h6{
+	font-family: 'Helvetica Neue LT-Std';
+	font-size: 1.55rem;
+	line-height: 1.75rem;
+}
 
+.iconDivision{
+	width: 100%;
+	color: #186990;
+    font-size: 45px;
+    font-family: 'HelveticaNeueLTStd-Lt';
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    padding: 2%;
+}
+.iconDivision img{
+	width: 10px;
+    height: 15px;
+    margin-right: 10px;
+}
+.iconDivisionLab{
+	display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+.iconDivisionLab img{
+	width: 10px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.divProductoView{
+	display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.modeloText{
+	font-family: 'Helvetica Neue LT Std';
+	font-size: 40px;
+}
+.divImagen{
+	width: 80%;
+}
+.divImagen p{
+	color: #1a4b6b;
+	font-family: 'HelveticaNeueLTStd-Md';
+	font-size: 20px;
+
+}
 /*Buscador*/ 
 
 .select-box{
@@ -701,7 +1050,7 @@ hr.bolder-line {
 		padding-top: 4rem;
 	}
 	.imgGaleria{
-		font-size: 2em;
+		font-size: 1.3rem;
 	}
 }
 
@@ -723,11 +1072,43 @@ hr.bolder-line {
 	#lg-visible {
 		display: none;
 	}
-	.imgGaleria{
-		font-size: 1em;
+	.containerCategoria {
+		flex-direction: column;
+		align-items: center;
 	}
+	.textCategoria{
+		margin-bottom: 0;
+		font-size: 2rem;
+	}
+	.imgGaleria {
+		width: 100%;
+		height: calc(100vh /4);
+		font-size: 3rem;
+		display: flex;
+		justify-content: center;
+	}
+	.imgGaleria a{
+		margin: 0;
+		font-size: 2rem;
+	}
+	
 }
+ @media (min-width: 769px){
+	.divDivision{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		background-color: #000;
+	}
+	.fondo1:active{
+		zoom: 0%;
+	}
+	.fondo2:active{
+		zoom: 0%;
+	}
 
+} 
 @media (max-width: 768px) {
 	body {
 		font-size: 12px;
@@ -740,26 +1121,91 @@ hr.bolder-line {
 	#dispositivos-slider {
 		padding-bottom: 20px;
 	}
+	.divDivision{
+		display: none;
+	}
+	.divisionMobile{
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #000;
+	}
+	.mobileHome{
+		background-size: cover;
+		height: calc(100vh/3);
+		background-position: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		color: #fff;
+	}
+	.mobileHome h4{
+		font-size: 25px;
+	}
 	
+	.divParrafo{
+		display: none;
+	}
+	.fondo1{
+		background-image:url('../img/galeria2.png');
+		background-size: cover;
+		height: calc(100vh/3);
+		background-position: center;
+		display: flex;
+		width: 100%;
+		border: solid 2px #000;
+	}
+
+	.fondo1 h4{
+		font-size: 20px;
+	}
+	.fondo2{
+		background-image:url('../img/galeria3.png');
+		background-size: cover;
+		height: calc(100vh/3);
+		background-position: center;
+		display: flex;
+		width: 100%;
+		border: solid 2px #000;
+	}
+	
+	.fondo2 h4{
+		font-size: 20px;
+	}
+	
+	.clickMobile.agrandar { 
+		zoom: 75%;
+		
+	}
 	.containerCategoria{
 		flex-direction: column;
 		align-items: center;
 	}
 	.imgGaleria{
 		width: 100%;
-		height: 30%;
+		height: calc(100vh /4);
 	}
 	.divBanner{
 		justify-content: center;
 	}
 	.divBanner h1 {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 	.divBanner h3 {
-		font-size: 2rem;
+		font-size: 1.7rem;
 	}
 	.divBanner h4 {
-		font-size: 2rem;
+		font-size: 1.7rem;
+	}
+	.divBannerBG{
+		height: calc(100vw / 4);
+	}
+	.imgSubcategoria {
+		width: 90%;
 	}
 	.mobileCategorias{
 		width: 100%;
@@ -772,5 +1218,112 @@ hr.bolder-line {
 	}
 	.textCategoria{
 		margin-bottom: 0;
+	}
+	
+	.tituloBanner h1{
+		font-size: 30px;
+	}
+	.tituloBanner h2{
+		font-size: 20px;
+	}
+	.title-section{
+		align-items: center;
+	}
+	.title-section h1{
+		font-size: 3.3rem;
+		
+	}
+	.title-section h2{
+		font-size: 3rem;
+	
+	}
+	.title-section h3{
+		font-size: 2.5rem;
+		
+	}
+	.divLinkIluminacion{
+		height: calc(100vh / 2);
+	}
+	.divLinkIluminacion a{
+		font-size: 2rem;
+	}
+	.divTextIlu h4 {
+		font-size: 2rem;
+	}
+	
+	.tituloNegatoscopio {
+		font-size: 45px;
+		width: 100%;
+		justify-content: center;
+	}
+	.containerProductosIlu {
+		height: 100%;
+		width: 100%;
+	}
+	.productosIluDiv {
+		width: 100%;
+		height: 100%;
+		justify-content: center;
+		padding: 10px;
+	}
+	.categoriaProductosDiv {
+		width: 160px;
+		margin: 5% 3% 5% 3%;
+	}
+	.irArribaText{
+		font-size: 25px;
+	}
+	.irArribaText img{
+		width: 10px;
+		height: 20px;
+	}
+	.division{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.divImagen{
+		width: 100%;
+	}
+}
+@media(max-width:670px){
+	.title-section h1{
+		font-size: 2.5rem;
+		
+	}
+	.title-section h2{
+		font-size: 1.5rem;
+	
+	}
+	.title-section h3{
+		font-size: 1.5rem;
+		
+	}
+	.divTextIlu{
+		width: 80%;
+	}
+	.divLinkIluminacion{
+		height: 40%;
+		width: 100%;
+	}
+	.divLinkIluminacion a{
+		font-size: 1.5rem;
+		margin-bottom: 0.2rem;
+	}
+	.divTextIlu h4 {
+		font-size: 2rem;
+	}
+
+}
+@media (max-width: 350px) {
+	.tituloBanner h1{
+		font-size: 25px;
+	}
+	.tituloBanner h2{
+		font-size: 15px;
+	}
+	.imgSubcategoria {
+		width: 90%;
 	}
 }

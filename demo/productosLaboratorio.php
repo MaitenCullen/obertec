@@ -58,7 +58,7 @@
 					<li><a href="fabricacion.php" title="Fabricacion">FABRICACIÓN E IMPORTACIÓN</a></li>
 				  </ul>
 				</li>
-				<li class="active"><a href="negatoscopios.php" title="Equipos">EQUIPOS</a></li>
+				<li class="active"><a href="equipos.php" title="Equipos">EQUIPOS</a></li>
 				<li><a href="distribuidores.php" title="distribuidores">DISTRIBUIDORES</a></li>
 				<li><a href="contacto.php" title="Contacto">CONTACTO</a></li>
 			  </ul>
@@ -70,12 +70,28 @@
 	</div> 
 </header>
 <section>
-	<div id='producto'>
+<div class="container-fluid divBannerBG">
+		<div class='divBanner'>
+			<div class="row col-md-10 p-3 divTextosBanner">
+				<div class="containerBannerText" id="000">
+						<h1 class="title-section">Equipos</h1>
+						<h3>DIVISIÓN LABORATORIO </h3>
+				</div>
+				<div>
+					<h4 class="catSeleccionada"id="seleccionado"></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div  class="container-fluid">
+		<div id='producto' class=" divProductoLab">
+		</div>
 	</div>
 </section>
 <?php
 	require_once("footer.php");
 ?>
 <script src= "js/productosLaboratorio.js"></script>
+
 
 </body>

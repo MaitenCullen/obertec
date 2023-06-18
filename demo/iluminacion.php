@@ -73,48 +73,33 @@
 
 
 <section>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<h1 class="title-section">Equipos</h1>
-				<h2> División iluminacion</h2>
+	<div class="container-fluid divBannerIlu">
+			<div class="row bannerIluminacion">
+				<div class="col-md-12 title-section">
+					<div>
+						<h1 class="">Equipos</h1>
+					</div>
+					<div class="divTiulos">
+						<h2> División iluminacion /</h2>
+						<h3>  Negatoscopios Led</h3>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class='containerCategoria'>
-			<div class='divImg'>
-				<img src='./img/prueba.png'/>
-			</div>
-			<div>
-				<img src='./img/prueba.png'/>
-			</div>
-			<div>
-				<img src='./img/prueba.png'/>
-			</div>
-			<div>
-				<img src='./img/prueba.png'/>
-			</div>
-			<div>
-				<img src='./img/prueba.png'/>
-			</div>
-			<div>
-				<img src='./img/prueba.png'/>
-			</div>
-			<div>
-				<img src='./img/prueba.png'/>
-			</div>
-			<div>
-				<img src='./img/prueba.png'/>
-			</div>
-			<div>
-				<img src='./img/prueba.png'/>
-			</div>
-			<div>
-				<img src='./img/prueba.png'/>
-			</div>
-		</div>
 	</div>
+	<div class='containerIluminacion'>
+		<div class='divLinkIluminacion'>
+			<div class="containerTextosIlu">
+				<div class="divTextIlu">
+					<img src='./img/iconB.png'/>
+					<h4> NEGATOSCOPIOS LED </h4>
+				</div>
+				<a href='iluminacionProductos.php'>
+					Ver
+				</a>
+			</div>
+		</div>		
+		</div>
 </section>	
-<img class="f-width" src="img/bg-bottom-section.jpg" alt="Obertec" title="Obertec">
 <?php
 	require_once("footer.php");
 ?>

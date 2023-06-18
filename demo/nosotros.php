@@ -58,7 +58,7 @@
 					<li><a href="fabricacion.php" title="Fabricacion">FABRICACIÓN E IMPORTACIÓN</a></li>
 				  </ul>
 				</li>
-				 <li><a href="negatoscopios.php" title="Equipos">EQUIPOS</a></li>
+				 <li><a href="equipos.php" title="Equipos">EQUIPOS</a></li>
 				<li><a href="distribuidores.php" title="Distribuidores">DISTRIBUIDORES</a></li>
 				<li><a href="contacto.php" title="Contacto">CONTACTO</a></li>                       
 			  </ul>
@@ -102,7 +102,7 @@ Destinados a satisfacer diferentes necesidades de los sectores de laboratorio, i
 						</ul>
 					</div>
 					<div class="col-md-6">
-						<h2 class="highlight-02"><span class="glyphicon glyphicon-triangle-right"></span><a href="negatoscopios.php">División Iluminación</a></h2>
+						<h2 class="highlight-02"><span class="glyphicon glyphicon-triangle-right"></span><a href="iluminacion.php">División Iluminación</a></h2>
 						<ul class="link-list">
 							<li><a href="negatoscopios.php" title="Negatoscopios">Negatoscopios Tecnología Led</a></li>
 							<!--<li><a href="iluminador.php" title="iluminadores">Iluminadores Frontales Tecnología Led</a></li>-->

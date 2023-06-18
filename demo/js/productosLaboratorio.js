@@ -93,9 +93,9 @@ const productos = [
         id:'12',
         subCategoriaID:'4',
         modelo:'DRBA-100',
-        nombre:'PROXIMAMENTE',
-        imagen:'../demo/img/laboratorioIMG/MS5.jpg',
-        descripcion:'FALTAN LOS ARCHIVOS'
+        nombre:'',
+        imagen:'',
+        descripcion:'PRONTO VAS A ENCONTRAR NUEVOS PRODUCTOS'
     },
     {
         id:'13',
@@ -118,16 +118,16 @@ const productos = [
         subCategoriaID:'6',
         modelo:'PROXIMAMENTE',
         nombre:'CUBAS DE ELECTROFORESIS ',
-        imagen:'../demo/img/laboratorioIMG/MS5.jpg',
-        descripcion:'NO DETERMINADO AUN'
+        imagen:'',
+        descripcion:'PRONTO VAS A ENCONTRAR NUEVOS PRODUCTOS'
     },
     {
         id:'16',
         subCategoriaID:'7',
         modelo:'PROXIMAMENTE',
         nombre:'FUENTES DE PODER',
-        imagen:'../demo/img/laboratorioIMG/MS5.jpg',
-        descripcion:'NO DETERMINADO AUN'
+        imagen:'',
+        descripcion:'PRONTO VAS A ENCONTRAR NUEVOS PRODUCTOS'
     },
     {
         id:'17',
@@ -222,17 +222,17 @@ const productos = [
         subCategoriaID:'14',
         modelo:'C-500',
         nombre:'PROXIMAMENTE',
-        imagen:'../demo/img/laboratorioIMG/MS5.jpg',
+        imagen:'',
         descripcion:'FALTA LA DATA'
     },
-    {
-        id:'29',
-        subCategoriaID:'14',
-        modelo:'G-1000',
-        nombre:'PROXIMAMENTE',
-        imagen:'../demo/img/laboratorioIMG/MS5.jpg',
-        descripcion:'FALTA LA DATA'
-    },
+    // {
+    //     id:'29',
+    //     subCategoriaID:'14',
+    //     modelo:'G-1000',
+    //     nombre:'PROXIMAMENTE',
+    //     imagen:'',
+    //     descripcion:'FALTA LA DATA'
+    // },
     {
         id:'30',
         subCategoriaID:'15',
@@ -286,7 +286,7 @@ const productos = [
         subCategoriaID:'15',
         modelo:'',
         nombre:'NO VA',
-        imagen:'../demo/img/laboratorioIMG/micropipeta.jpg',
+        imagen:'',
         descripcion:'FALTA DATA'
     },
     {
@@ -321,22 +321,6 @@ const productos = [
         imagen:'../demo/img/laboratorioIMG/TC-800Ba.jpg',
         descripcion:'Características Principales: <br/><br/> - Gabinete: Construido en dos piezas. Base de en acero inoxidable, espesor 1.25mm. Tapa de aluminio espesor 2.0 mm con tratamiento de pintura hibrida en polvo Epoxy-Polyester <br/> - Sistema calefactor: Electrocalefactor blindado compactado, construido en vaina de acero inoxidable AISI 316l diámetro 9 mm formato tipo “rulo” de 4 vueltas. <br/> - Potencia total 800 w 220 v <br/> - Control de temperatura <br/> - Selector de temperatura por puntos fijos: 3 puntos de trabajo 25° - 37° y 56°C <br/> - Selector de temperatura continúo: temperatura ambiente a 100°C <br/> - Estabilidad de temperatura +/- 0,3º C <br/> - Lectura de la temperatura <br/> - Termómetro (no incluido)  <br/> - Sistema de circulación de agua <br/> - Mediante bomba construida totalmente en AC/INOX motor de accionamiento silencioso con su eje montado sobre rodamientos <br/> - Sistema de alarmas <br/> - Alarma lumínico audible por sobre temperatura, con corte automático de potencia <br/> - Alarma lumínico audible por falta de agua, con corte automático de potencia <br/> - Sistema de iluminación <br/> - Iluminación de la cuba por medio de leds de alto brillo (cuba no incluida) <br/> - Conexión 220V 50HZ <br/> - Para ser utilizada en laboratorio, industria y educación.'
     },
-    {
-        id:'41',
-        subCategoriaID:'18',
-        modelo:'TC-800M',
-        nombre:'',
-        imagen:'../demo/img/laboratorioIMG/TC-800Mb.jpg',
-        descripcion:''
-    },
-    {
-        id:'',
-        subCategoriaID:'',
-        modelo:'',
-        nombre:'',
-        imagen:'../demo/img/laboratorioIMG/MS5.jpg',
-        descripcion:''
-    },
 
 ]
 
@@ -344,16 +328,60 @@ const productos = [
 
 const params = new URLSearchParams(window.location.search);
 	const myProduct = params.get('productos');
-	console.log(myProduct)
+    const nombreSub = params.get('categoria');
+    
 
   
     let productoSection = document.getElementById('producto');
+   
+    productoSection.innerHTML = productos.filter(prod => prod.subCategoriaID == myProduct).map((producto) => {
+        if(producto.imagen) {
+            return (
+        `<div class="col-md-9">` + 
+            `<div class="divProductoView">`+
+               `<div class="division">`+ 
+                    `<div class="divisonDiv">`+
+                        `<h5>EQUIPOS</h5>`+
+                        `<h5>DIVISIÓN LABORATORIO</h5>`+
+                    `</div>`+
+                    `<div class="iconDivision tituloNegatoscopio">`+
+                       `<img src='../demo/img/iconAzul1.png'/>`+
+                        `<h6 class="seleccionadoLab"></h6>`+
+                    `</div>`+
+               `</div>`+
+                `<div id=${producto.id} class="row divImagen">`+
+                    `<div class="col-md-5">`+
+                            `<h2 class="modeloText">${producto.modelo}</h2>`+
+                            `<p>${producto.descripcion}</p>`+
+                    `</div>`+
+                    `<div class="col-md-7">`+
+                        `<img src=${producto.imagen} class="full-width" alt="Laboratorio imagen producto"/>`+
+                    `</div>`+
+                `</div>`+ 
+                `<div class="irArriba">`+
+                    `<div class="irArribaText">`+
+                        `<img src='../demo/img/iconAzul1.png'/>`+
+                    `<a href="#000"> Ir arriba </a>`+
+                    `</div>`+
+                `</div>`+
+            `</div>`+
+        `</div>`+
+        `<img src="../demo/img/linea.png"/>` 
+            )
+        } else {
+            return (
+            `<div class="divProximamente">` +
+                '<p>' + 'PROXIMAMENTE VAS A ENCONTRAR MUCHOS MAS PRODUCTOS' +
+                '</P>'+
+            `</div>`
+            ) 
+        } }).join('');
 
-    productoSection.innerHTML = productos.filter(prod => prod.subCategoriaID == myProduct).map( producto => (
-        `<div id=${producto.id}>` +
-        `<p>${producto.modelo}</p>` +
-           `<p>${producto.descripcion}</p>` +
-           `<img src=${producto.imagen} />`+
-        '</div>'
-    ) ) ;
+    let nombreSubcategoria = document.getElementsByClassName('seleccionadoLab');
+    for (let i = 0; i < nombreSubcategoria.length; i++) {
+        nombreSubcategoria[i].innerText = nombreSub;
+      }
+    
+    
+   
 
